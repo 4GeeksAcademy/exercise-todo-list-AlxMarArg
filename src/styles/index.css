@@ -1,11 +1,209 @@
-/* 
+body {
+    background: #f2f2f2;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    border-radius: 8px;
+}
 
-*/
+h1 {
+    font-weight: 100;
+    font-size: 48px;
+    text-align: center;
+    color: #e6e6e6;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+ul li:hover {
+    background: #f9f9f9;
+}
+
+ul li input[type="text"] {
+    width: 100%;
+    font-size: 20px;
+    padding: 1rem;
+    border: none;
+    outline: none;
+}
+ul li i {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+i {
+    color: #cc0000;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+i:hover {
+    opacity: 1 !important;
+}
+
+ul li:hover i {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.text-left {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    color: #999;
+}
+/*
+.alerta-error {
+     position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff4d4f;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    font-size: 18px;
+    animation: fadeOut 4s forwards;
+    opacity: 1;
+    text-align: center;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}*/
+#line {/* Codigo sacado de https://codepen.io/KitPickles/pen/QWzWxba*/
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 400px;
+	left: 50%;
+	margin-left: 0;
+	display: block;
+	transform: rotate(-5deg);
+	animation: 	lineIn 0.2s 0.8s forwards, 
+	        	lineGrow 0.4s 1.6s forwards,
+	        	linehide 0.5s 7.3s forwards; 
+}
+
+#box {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+  background: red;
+	opacity: .8;
+	z-index: 0;
+}
+
+@keyframes lineIn {
+	0% {width: 0; height: 0px;}
+	100% {width: 2200px; margin-left: -1100px; height: 3px;}
+}
+
+@keyframes lineGrow {
+	100% {height: 200px; top: 300px;}
+}
+
+@keyframes linehide {
+	0% {height: 200px;top: 300px;}
+	100% {height: 0px; top: 400px;}
+}
+
+#mainText {
+	z-index: 999;
+  	color: white;
+	text-align: center;
+	font-size: 40px;
+	width: 2200px;
+	display: block;
+	line-height: 100px;
+	text-indent: -3000px;
+	position: absolute;
+	top: 30px;
+	white-space: nowrap;
+	opacity: 0;
+	font-style: italic;
+	text-transform: uppercase;
+	display: block;
+	position: absolute;
+	animation: 	textIn 0.4s 2s forwards,
+        		textTravel 4.6s 2.4s linear forwards;
+}
+
+@keyframes textIn {
+	0% {text-indent: -3000px; opacity: 1;}
+	100% {text-indent: -20px; opacity: 1;} 
+}
+
+@keyframes textTravel {
+	0% {text-indent: -20px;}
+	90% {text-indent: 20px;}
+	95% {text-indent: 3000px;} 
+	100% {text-indent: 3000px;} 
+}
+
+#subText {
+	z-index: 999;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	width: 2200px;
+	display: block;
+	line-height: 40px;
+	text-indent: 3000px;
+	position: absolute;
+	bottom: 30px;
+	white-space: nowrap;
+	opacity: 0;
+	font-style: italic;
+	text-transform: uppercase;
+	display: block ;
+	position: absolute ;
+	animation: 	tagIn 0.4s 2s forwards,
+		        tagTravel 4.6s 2.4s linear forwards;
+}
+
+@keyframes tagIn {
+	0% {text-indent: 3000px;opacity: 1;} 
+	100% {text-indent: 20px;opacity: 1;} 
+}
+
+@keyframes tagTravel {
+	0% {text-indent: 20px;}
+	90% {text-indent: -20px;}
+	95% {text-indent: -3000px;} 
+	100% {text-indent: -3000px;} 
+}
