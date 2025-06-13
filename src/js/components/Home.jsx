@@ -18,7 +18,7 @@ const Home = () => {
 								setTodos(prev => [...prev, inputValor]);
 							}else{
 								setMensajeError(`El valor "${inputValor}" ya está en los Todos.`);
-            					setTimeout(() => setMensajeError(null), 7700);
+            					setTimeout(() => setMensajeError(null), 4050);
 							}//Esta mal ajustado el tiempo pero el efecto mola! crea errores si insistes en introducir el valor variar veces
 							e.target.value="";
 						}}} // se agrega el valor en todos pero unicamente cuando se presiona el boton enter y no esta repetido dentro de todos
