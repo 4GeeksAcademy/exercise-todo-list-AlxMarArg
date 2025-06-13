@@ -112,9 +112,9 @@ ul li:hover i {
 	margin-left: 0;
 	display: block;
 	transform: rotate(-5deg);
-	animation: 	lineIn 0.2s 0.8s forwards, 
-	        	lineGrow 0.4s 1.6s forwards,
-	        	linehide 0.5s 7.3s forwards; 
+	animation: lineIn 0.1s 0.1s forwards, 
+	           lineGrow 0.21s 0.2s forwards,
+	           linehide 0.26s 3.6s forwards; 
 }
 
 #box {
@@ -159,8 +159,8 @@ ul li:hover i {
 	text-transform: uppercase;
 	display: block;
 	position: absolute;
-	animation: 	textIn 0.4s 2s forwards,
-        		textTravel 4.6s 2.4s linear forwards;
+	animation: textIn 0.21s 0.41s forwards,
+	           textTravel 2.36s 0.62s linear forwards;
 }
 
 @keyframes textIn {
@@ -192,8 +192,8 @@ ul li:hover i {
 	text-transform: uppercase;
 	display: block ;
 	position: absolute ;
-	animation: 	tagIn 0.4s 2s forwards,
-		        tagTravel 4.6s 2.4s linear forwards;
+	animation: 	tagIn 0.21s 0.41s forwards,
+	           tagTravel 2.36s 0.62s linear forwards;
 }
 
 @keyframes tagIn {
